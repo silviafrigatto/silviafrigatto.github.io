@@ -307,14 +307,14 @@ p {
 .aboutme-pic {
     display: flex;
     justify-content: center;
+    width: 100%; /* Ensure container uses full width */
+    padding: 0 10px; /* Optional: add some breathing room on tiny screens */
 }
 
 .aboutme-pic img {
-    max-width: min(400px, 100%); /* Never bigger than 400px but scale down on smaller screens*/
-    height: auto; /* Keeps proportions intact */
+    max-width: min(400px, 100%);
+    height: auto;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
 }
 
 .skills-grid {
