@@ -310,7 +310,7 @@ p {
 }
 
 .aboutme-pic img {
-    width: 400px; /* Sets specific width */
+    max-width: min(400px, 100%); /* Never bigger than 400px but scale down on smaller screens*/
     height: auto; /* Keeps proportions intact */
     border-radius: 8px;
     display: flex;
