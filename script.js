@@ -43,3 +43,18 @@ document.addEventListener('click', function(e) {
         }
     }
 });
+
+function toggleDetails(button) {
+            const details = button.nextElementSibling;
+            const isExpanded = details.classList.contains('expanded');
+            
+            if (isExpanded) {
+                details.classList.remove('expanded');
+                button.textContent = 'Read More ✨';
+                button.style.background = 'linear-gradient(135deg, #2dd4bf 0%, #a855f7 100%)';
+            } else {
+                details.classList.add('expanded');
+                button.textContent = 'Show Less ⚡';
+                button.style.background = 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)';
+            }
+        }
