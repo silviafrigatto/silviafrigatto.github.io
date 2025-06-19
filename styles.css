@@ -685,6 +685,214 @@ ul {
     }
 }
 
+/* Enhanced Mobile Responsiveness for iPhone SE and small screens */
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .project-card {
+        margin-bottom: 1rem;
+        border-radius: 12px;
+        transform: none !important; /* Disable hover transforms on mobile */
+    }
+    
+    .project-card:hover {
+        transform: none !important;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+    
+    .project-content {
+        padding: 1rem;
+    }
+    
+    .project-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .project-description-short {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    
+    .project-details {
+        transition: all 0.4s ease-in-out;
+    }
+    
+    .project-details.expanded {
+        max-height: none; /* Remove max-height constraint on mobile */
+        animation: fadeInUp 0.4s ease-out;
+    }
+    
+    .project-details ul {
+        padding-left: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .project-details li {
+        margin-bottom: 0.6rem;
+        line-height: 1.5;
+        font-size: 0.9rem;
+    }
+    
+    .read-more-btn {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        text-align: center;
+        display: block;
+    }
+    
+    .read-more-btn:hover {
+        transform: none; /* Disable hover transform on mobile */
+    }
+    
+    .project-tech {
+        gap: 0.4rem;
+        margin-top: 1rem;
+    }
+    
+    .tech-tag {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.75rem;
+        border-radius: 15px;
+    }
+    
+    .tech-tag:hover {
+        transform: none; /* Disable hover effects on mobile */
+    }
+    
+    .project-img {
+        height: 160px;
+    }
+    
+    .project-img img {
+        object-fit: cover;
+    }
+    
+    /* Improve tap targets for mobile */
+    .tab-button {
+        min-height: 44px; /* iOS recommended minimum tap target */
+        font-size: 0.85rem;
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .contact-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Improve sidebar on very small screens */
+    .sidebar {
+        padding: 1rem;
+    }
+    
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+        font-size: 1.2rem;
+    }
+    
+    .sidebar h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tagline {
+        font-size: 0.9rem;
+    }
+    
+    .tab-content-inner {
+        padding: 1rem;
+    }
+    
+    /* Fix any text overflow issues */
+    .project-title,
+    .project-description-short,
+    .project-details li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+}
+
+/* Animation for mobile expansion */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Extra small screens (iPhone SE in landscape or very narrow) */
+@media (max-width: 375px) {
+    .main-container {
+        min-width: 320px;
+    }
+    
+    .project-content {
+        padding: 0.75rem;
+    }
+    
+    .project-title {
+        font-size: 1rem;
+    }
+    
+    .project-description-short {
+        font-size: 0.9rem;
+    }
+    
+    .read-more-btn {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .tech-tag {
+        padding: 0.25rem 0.6rem;
+        font-size: 0.7rem;
+    }
+    
+    .tab-button {
+        font-size: 0.75rem;
+        padding: 0.6rem 0.4rem;
+    }
+}
+
+/* Improve touch interactions */
+@media (hover: none) and (pointer: coarse) {
+    .project-card:hover {
+        transform: none;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+    
+    .skill-card:hover {
+        transform: none;
+    }
+    
+    .experience-item:hover,
+    .education-item:hover,
+    .publication-item:hover {
+        transform: none;
+    }
+    
+    .read-more-btn:hover {
+        transform: none;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    }
+}
+
 .experience-item, .education-item, .publication-item {
     margin-bottom: 2rem;
     position: relative;
